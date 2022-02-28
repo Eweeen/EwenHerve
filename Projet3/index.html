@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Puissance 4</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <section id="game-content">
+            <div class="infos__bord">
+<!-- ========================================== Menu ==========================================-->
+                <div class="infos__bord_content">
+                    <div class="infos__bord_title">
+                        <h1>Puissance 4</h1>
+                    </div>
+<!-- ========================================== Score ==========================================-->
+                    <div class="infos__bord-score">
+                        <p>SCORE</p>
+                        <p id="scoreContent">
+                            <span class="score">
+                                <span id="jetonJoueur1"></span>
+                                <span id="red-points">0</span> - <span id="yellow-points">0</span>
+                                <span id="jetonJoueur2"></span>
+                            </span>
+                            <div class="score">
+                                <span id="PseudoJoueur1"></span>
+                                <span id="PseudoJoueur2"></span>
+                            </div>
+                        </p>
+                    </div>
+<!-- ========================================== Tour Joueur / Message Win et Egalité ==========================================-->
+                    <div class="infos__bord-turn" id="player-color">
+                        <h2>C'est à <span id="player-turn"></span> de jouer.</h2>
+                    </div>
+                    <div class="infos__bord-win" id="msg-win">
+                        <img src="img/johnny-sins.jpg" alt="Johnny Sins">
+                        <p>Bien joué <span id="player-win"></span> tu as gagné !</p>
+                        <p>Appuie sur <strong>Entrer</strong> pour relancer une partie.</p>
+                    </div>
+                    <div class="infos__bord-win" id="msg-egalite">
+                        <img src="img/egalite.jpg" alt="Egalité">
+                        <p>Dommage égalité...</p>
+                        <p>Appuie sur <strong>Entrer</strong> pour relancer une partie.</p>
+                    </div>
+                </div>            
+            </div>
+<!-- ========================================== Jeu ==========================================-->
+            <div class="grid__content">
+<!-- ========================================== Formulaire Début de Jeu ==========================================-->
+                <div class="formulaire">
+                    <div class="form-group">
+                        <label for="selectTheme">Selectionnez un thème :</label>
+                        <select name="selectTheme" id="selectTheme">
+                            <option value="classique">Classique</option>
+                            <option value="naruto">Naruto</option>
+                            <option value="psVSxbox">Playstation VS Xbox</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="joueur1">Pseudo du Joueur 1 (10 caractères Max) :</label>
+                        <input type="text" name="joueur1" id="joueur1" maxlength="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="joueur2">Pseudo du Joueur 2 (10 caractères Max) :</label>
+                        <input type="text" name="joueur2" id="joueur2" maxlength="10" required>
+                    </div>
+                    <div class="form-btn">
+                        <input type="submit" value="Jouer" id="confirmForm">
+                    </div>
+                </div>
+<!-- ========================================== Grille du Puissance 4 ==========================================-->
+                <div id="grille"></div>
+                <div class="touches">
+                    <img src="Img/touchejeux.png" alt="">
+                </div>
+            </div>
+        </section>
+<!-- ========================================== Footer ==========================================-->
+        <section id="footer">
+            <footer>
+                <p>Puissance 4 de Benjamin Drouin, Ewen Hervé et Gwendal Gemy</p>
+            </footer>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ewen Hervé">
+    <meta name="keywords" content="Burger, Restaurant, Fast-food, Macdonald's, Burger King"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../images/icon-burger.png">
+    <title>Burger Code | Burger Double Steak</title>
+</head>
+<body>
+
+    <nav class="nav-phone">
+        <div class="container">
+            <div class="pointer" onclick="openNav()"><i class="fas fa-bars"></i></div>
+            <h1>Burger Code</h1>
+        </div>
+    </nav>
+
+    <nav id="myNav" class="overlay">
+        <span class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></span>
+
+        <div class="overlay-content">
+            <a href="../index.html" title="Home"><i class="fas fa-home"></i> Home</a>
+            <a href="contact.html" title="Contact"><i class="far fa-address-book"></i> Contact</a>
+        </div>
+    </nav>
+
+    <section id="Produit">
+        <div class="container">
+            <article>
+                <div class="produit-container">
+                    <div class="image-produit">
+                        <form class="modale-checkbox">
+                            <div class="bg-yellow">
+                                <input type="checkbox" id="check" name="check" onclick="modale()">
+                                <label for="check">
+                                    <img src="../images/m6.png" alt="Photo d'un Burger" class="img">
+                                </label>
+                                <label for="check" id="zoom"><i class="fas fa-search"></i></label>
+                            </div>
+                        </form>
+            
+                        <div class="modale">
+                            <label for="check" id="bg-close"></label>
+                            <img src="../images/m6.png" alt="Photo d'un Burger">
+                            <label for="check" id="times-close"><i class="fas fa-times"></i></label>
+                        </div>
+                    </div>
+                    <div class="description-produit">
+                        <div class="produit-content">
+                            
+                            <h1>Burger Double Steak</h1>
+                            <span>11.90 €</span>
+
+                            <div class="black-divider"></div>
+                            <div class="quantite">
+                                <h2>Quantité</h2>
+                                <input type="number" value="1" min="1" max="10">
+                            </div>
+
+                            <div class="black-divider"></div>
+
+                            <h2>Menu :</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Menu</th>
+                                        <th>Boisson</th>
+                                        <th>Snack</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Burger</td>
+                                        <td>
+                                            <select>
+                                                <option>Cola-Cola</option>
+                                                <option>Orangino</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option>Frites</option>
+                                                <option>Potatoes</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <br> <br> <br> <br> <br> <br> <br> <br>
+
+                            <button><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
+
+                        </div>
+                    </div>    
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <footer>
+
+        <a href="#" class="top"><i class="fas fa-arrow-alt-circle-up"></i></a>
+
+        <div class="divider"></div>
+
+        <div class="footer-container">
+            <div>
+                <ul>
+                    <li><h2>Nos Menus</h2></li>
+                    <li><a href="m1.html">Menu Classic</a></li>
+                    <li><a href="m2.html">Menu Bacon</a></li>
+                    <li><a href="m3.html">Menu Big</a></li>
+                    <li><a href="m4.html">Menu Chicken</a></li>
+                    <li><a href="m5.html">Menu Fish</a></li>
+                    <li><a href="#">Menu Double Steak</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li><h2>Contact</h2></li>
+                    <li>Tél : 06 37 87 76 99</li>
+                    <li>ewen.herve.35@orange.fr</li>
+                    <li>20 allée des cerisiers, <br>
+                    35550 Saint-Just</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li><h2>Horaires</h2></li>
+                    <li><i class="fas fa-check"></i> Lun 8h-00h</li>
+                    <li><i class="fas fa-check"></i> Mar 8h-00h</li>
+                    <li><i class="fas fa-check"></i> Mer 8h-00h</li>
+                    <li><i class="fas fa-check"></i> Jeu 8h-00h</li>
+                    <li><i class="fas fa-check"></i> Ven 8h-2h</li>
+                    <li><i class="fas fa-check"></i> Sam 8h-2h</li>
+                    <li><i class="fas fa-times"></i>&thinsp; Dim fermé</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li><h2>Nos réseaux</h2></li>
+                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i> &thinsp; Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> &thinsp; Instagram</a></li>
+                    <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> &thinsp; Linkedin</a></li>
+                    <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i> &thinsp; GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

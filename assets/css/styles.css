@@ -548,6 +548,28 @@ nav li a span {
 #portfolio h1 {
   margin-bottom: 30px;
 }
+#portfolio .projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: center;
+  gap: 20px;
+}
+#portfolio .projets .item {
+  width: 250px;
+  height: auto;
+}
+#portfolio .projets .item:hover h3 {
+  color: #4682B4;
+}
+#portfolio .projets .item .item-img {
+  overflow: hidden;
+}
+#portfolio .projets .item .item-img img {
+  width: 100%;
+}
+#portfolio .projets .item h3 {
+  margin: 5px 0;
+}
 
 /* ============= CONTACT =============  */
 #contact {
