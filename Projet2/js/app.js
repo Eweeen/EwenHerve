@@ -28,16 +28,20 @@ const next = document.querySelector('.slider-next');
 let slider = document.querySelector('.slider');
 index = 0;
 
-prev.addEventListener('click', () => {
-    if(index === 1) {
-        slider.style.transform = "translateX(0%)";
-        index--;
-    }
-});
+if (prev){
+    prev.addEventListener('click', () => {
+        if(index === 1) {
+            slider.style.transform = "translateX(0%)";
+            index--;
+        }
+    });
+}
 
-next.addEventListener('click', () => {
-    if(index === 0) {
-        slider.style.transform = "translateX(-50%)";
-        index++;
-    }
-});
+if (next){
+    next.addEventListener('click', () => {
+        if(index === 0) {
+            slider.style.transform = "translateX(-50%)";
+            index++;
+        }
+    });
+}

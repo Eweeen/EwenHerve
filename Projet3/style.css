@@ -8,6 +8,17 @@
     --jeton-jaune: url(Img/JetonJaune.png);
 }
 
+.retour_menu {
+    width: 100%;
+    background-color: #212121;
+    padding: 5px;
+}
+
+.retour_menu a {
+    text-decoration: none;
+    color: #F1F1F1;
+}
+
 /*======== Jeux ========*/
 
 * {

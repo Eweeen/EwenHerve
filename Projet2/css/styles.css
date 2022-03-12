@@ -12,6 +12,16 @@ html, body {
     scroll-behavior: smooth;
 }
 
+.retour_menu {
+    width: 100%;
+    background-color: #212121;
+    padding: 5px;
+}
+
+.retour_menu a {
+    color: #F1F1F1;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -731,4 +741,5 @@ footer {
 @media screen and (max-width: 400px){
     .menu-container {grid-template-columns: repeat(auto-fill, 225px); grid-gap: 20px;}
     .menu-content {width: 225px; height: auto;}
+    section .container {width: 90%;}
 }
