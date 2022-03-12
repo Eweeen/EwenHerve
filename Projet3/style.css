@@ -3,9 +3,9 @@
 
 /*======== Background-color blue ========*/
 :root {
-    --bk-grille: url(img/bk-blue.png);
-    --jeton-rouge: url(img/JetonRouge.png);
-    --jeton-jaune: url(img/JetonJaune.png);
+    --bk-grille: url(Img/bk-blue.png);
+    --jeton-rouge: url(Img/JetonRouge.png);
+    --jeton-jaune: url(Img/JetonJaune.png);
 }
 
 /*======== Jeux ========*/
