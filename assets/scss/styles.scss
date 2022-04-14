@@ -1,24 +1,15 @@
-/* ============= FONTS ============= */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-/* ============= IMPORT =============  */
+// sass --watch assets/SCSS/styles.scss assets/CSS/styles.css
+/* ============================== IMPORTS ============================== */
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Karla:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 @import 'variables';
 
-/* ============= GÉNÉRAL =============  */
-
-*, ::before, ::after {
+/* ============================== RESET ============================== */
+*,
+::before,
+::after {
     box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: $poppins;
-    font-size: $f-3;
-    background-color: $grey-1;
-    color: $white-1;
+    margin: 0;
 }
 
 a {
@@ -26,603 +17,825 @@ a {
     text-decoration: none;
 }
 
-h1,
-h2,
+ul, li {
+    list-style-type: none;
+}
+
+/* ============================== GENERAL ============================== */
+html, 
+body {
+    background-color: $black-2;
+    color: rgba($color: #FFFFFF, $alpha: 0.7);
+    font-family: $karla;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+h1, 
+h2, 
 h3 {
-    font-weight: 600;
+    font-family: $montserrat;
+    color: $white;
 }
 
-h1,
-h2,
-h3,
 p,
-a,
-button {
-    line-height: 1;
+span,
+li {
+    font-size: 15px;
 }
 
-h1 {font-size: $f-1;}
-h2 {font-size: $f-2;}
-
-.container {
-    padding: 0 20px;
-    @include up-phone {
-        padding: 0 50px;
-    }
-    @include tablet {
-        padding: 0 100px;
-    }
-    @include laptop {
-        padding: 0 150px;
-    }
+.btn {
+    background-color: #60B2FD; 
+    border-radius: 999px; 
+    box-shadow: 0px 5px 15px -5px #60b2fd; 
+    padding: 15px 45px;
+    color: $white;
+    font-size: 15px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    font-family: "Karla", sans-serif;
+    cursor: pointer;
 }
 
-section {
-    width: 100%;
-    .bloc {
-        padding: 20px;
-        background-color: $grey-2;
-        border-radius: 10px;
-        margin-bottom: 30px;
-    }
-}
-
-.h-100 {
-    height: 100vh;
-}
-
-.w-12 {width: 100%;}
-.w-8 {
-    width: 100%;
-    margin-right: 20px;
-}
-.w-6 {
-    width: 100%;
-    @include tablet {
-        width: 49%;
-    }
-}
-.w-4 {
-    width: 100%;
-    @include tablet {
-        width: 300px;
-    }
-}
-
-.text {
-    @include tablet {
-        text-align: justify;
-    }
-}
-
-.text-muted {
-    font-size: $f-4;
-    color: $white-2;
-}
-
-/* ============= NAV =============  */
-nav {
-    display: none;
+/* ============================== NAV ============================== */
+.loader {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    width: 100px;
-    align-items: center;
-    z-index: 50;
-    @include laptop {
-        display: flex;
-    }
-    li {
-        background-color: $white-2;
-        color: $grey-1;
-        list-style-type: none;
-        width: 50px;
-        height: 50px;
-        border-radius: 999px;
-        margin: 10px 20px;
-        white-space: nowrap;
-        cursor: pointer;
-        &.active {
-            background-color: $blue-1;
-            color: $white-1;
-        }
-        &:hover {
-            background-color: $blue-1;
-            color: $white-1;
-            width: auto;
-            a {
-                span {
-                    width: 100%;
-                    margin-left: 10px;
-                    overflow: visible;
-                }
-            }
-        }
-        a {
-            width: 100%;
-            height: 100%;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            i {
-                font-size: $f-icon;
-            }
-            span {
-                display: inline-block;
-                width: 0%;
-                overflow: hidden;
-            }
-        }
-    }
-}
-
-.menu {
-    display: block;
-    position: fixed;
     right: 0;
-    width: 70px;
-    height: 70px;
-    border-bottom-left-radius: 100%;
-    background-color: $grey-3;
-    z-index: 50;
-    transition: all 0.4s ease-in-out;
-    @include laptop {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    i {
+        font-size: 35px;
+        color: $white;
+        margin-bottom: 15px;
+        animation: loading-spinner 2s infinite;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    &.loaded {
         display: none;
     }
-    &.active {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        .menu-content {
-            opacity: 1;
-            transform: scale(1);
-            transition: all 0.2s ease 0.4s;
-        }
+}
+
+@keyframes loading-spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
     }
-    .icon-menu {
-        position: fixed;
-        right: 0;
-        width: 55px;
-        height: 55px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 51;
-        .line {
-            width: 60%;
-            height: 2px;
-            background-color: $white-1;
-            transition: 
-                transform 0.3s ease,
-                opacity 0.3s ease,
-                top 0.3s ease;
-            position: relative;
-            &:nth-child(1) {
-                top: -10px;
-            }
-            &:nth-child(3){
-                top: 10px;
-            }
-        }
-        &.menu-anim {
-            .line {
-                &:nth-child(1){
-                    top: 3px;
-                    transform: rotate(45deg);
-                }
-                &:nth-child(2){
-                    opacity: 0;
-                }
-                &:nth-child(3){
-                    top: -3px;
-                    transform: rotate(-45deg);
-                }
-            }
-        }
-    }
-    .menu-content {
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: scale(0);
-        transition: all 0.2s ease;
-        overflow: hidden;
-        li {
-            position: relative;
-            list-style-type: none;
-            font-size: $f-2;
-            margin-bottom: 20px;
-            cursor: pointer;
-            &::before {
-                content: "";
-                width: 100%;
-                height: 2px;
-                position: absolute;
-                bottom: -4px;
-                background-color: $blue-1;
-                transform-origin: 0 100%;
-                transform: scaleX(0);
-                transition: transform 0.3s ease-in-out;
-            }
-            &.active {
-                color: $blue-1;
-            }
-            &:hover {
-                color: $blue-1;
-                &::before {
-                    transform: scale(1);
-                }
-            }
-            a {
-                display: inline-block;
-                width: 100%;
-                span {
-                    display: inline-block;
-                    margin-left: 10px;
-                }
-            }
-        }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
     }
 }
 
-
-
-/* ============= ACCUEIL =============  */
-#Accueil {
-    padding: 150px 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    background-image: url("../data/background.jpg");
-    background-size: cover;
-    background-position: center;
-    &::before {
-        content: "";
-        position: absolute;
-        background-color: rgba($color: $grey-2, $alpha: 0.3);
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
-    }
-    .presentation {
-        z-index: 2;
-        .photo-acceuil {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            overflow: hidden;
-            img {
-                width: 100%;
-            }
+/* ============================== NAV ============================== */
+#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    .navbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        transition: background 0.2s ease-in-out;
+        @include laptop {
+            padding: 20px 100px;
+        }
+        @include desktop {
+            padding: 20px 200px;
         }
         h1 {
-            margin-top: 5px;
-            text-align: center;
+            font-family: $hurricane;
+            font-size: 35px;
         }
-    }
-    .scroll {
-        z-index: 2;
-        p {
-            text-align: center;
-        }
-        a {
-            font-size: $fl-icon;
+        #btn-nav-hamburger {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
             display: flex;
+            align-items: center;
             justify-content: center;
-            animation: 2s infinite animate-icon-down ease-in-out;
+            @include laptop {
+                display: none;
+            }
+            .hamburger_bar {
+                position: relative;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                transition: all 0.2s ease-in-out;
+            }
+            .hamburger_bar::before,
+            .hamburger_bar::after {
+                content: "";
+                position: absolute;
+                top: -10px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                transition: all 0.2s ease-in-out;
+            }
+            .hamburger_bar::after {
+                top: 10px;
+            }
+            /* ===== ON CLICK HAMBURGER BUTTON ===== */
+            .hamburger_bar.active_btn_hamburger {
+                background-color: transparent;
+            }
+            .hamburger_bar.active_btn_hamburger::before {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+            .hamburger_bar.active_btn_hamburger::after {
+                top: 0;
+                transform: rotate(45deg);
+            }
         }
-    }
-}
 
-/* ============= BTS =============  */
-#BTS {
-    padding-top: 40px;
-    div {
-        display: inline-block;
-    }
-    h1 {
-        margin-bottom: 30px;
-    }
-    .bloc {
-        .text-muted {
-            text-align: end;
-            margin-top: 10px;
+        .nav_list {
+            display: none;
+            align-items: center;
+
+            @include laptop {
+                display: flex;
+            }
+            .nav_item {
+                font-family: $karla;
+                font-size: 17px;
+                text-transform: uppercase;
+                margin-left: 40px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid transparent;
+                transition: border 0.2s ease-in-out;
+                cursor: pointer;
+                &:hover, 
+                &.active {
+                    border-bottom: 2px solid $blue;
+                }
+            }
         }
     }
-    .options {
+
+    .nav_container {
         display: flex;
-        flex-direction: column;
-        @include tablet {
-            justify-content: space-between;
-            flex-direction: row;
+        position: absolute;
+        top: 0;
+        right: -200%;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: $black-2;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+        &.active_nav {
+            right: 0;
         }
-        .bloc {
-            h2 {
+        .nav_list {
+            .nav_item {
+                font-family: $karla;
                 text-align: center;
+                font-size: 20px;
+                text-transform: uppercase;
                 margin-bottom: 20px;
-            }
-            ul {
-                padding-left: 20px;
+                padding-bottom: 5px;
+                border-bottom: 2px solid transparent;
+                transition: border 0.2s ease-in-out;
+                cursor: pointer;
+                &:hover, 
+                &.active {
+                    border-bottom: 2px solid $blue;
+                }
             }
         }
     }
 }
 
-/* ============= À PROPOS =============  */
-#about {
-    padding-top: 40px;
-    h1 {
-        margin-bottom: 30px;
+/* ============================== ACCUEIL ============================== */
+#Accueil {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    overflow: hidden;
+    z-index: 1;
+    @include laptop {
+        padding: 30px 100px;
     }
-    .bloc {
-        display: flex;
-        flex-direction: column;
+    @include desktop {
+        padding: 30px 200px;
+    }
+    .svg_accueil {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: -50%;
+        z-index: -1;
         @include tablet {
-            flex-direction: row;
-            align-items: initial;
+            right: -25%;
         }
-        .photo-about {
-            margin-bottom: 10px;
-            @include tablet {
-                margin-bottom: 0;
-                margin-right: 20px;
+        @include laptop {
+            right: 0;
+        }
+    }
+    .accueil_container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include laptop {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        .photo {
+            width: 220px;
+            height: 220px;
+            margin-bottom: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0px 10px 20px -5px $black;
+            @include laptop {
+                width: 300px;
+                height: 300px;
             }
             img {
-                width: 100px;
+                width: 100%;
             }
         }
-        .text {
-            margin-bottom: 30px;
-        }
-        .btn {
-            display: inline-block;
-            background-color: $blue-1;
-            padding: 10px 50px;
-            border-radius: 5px;
-        }
-    }
-}
-
-/* ============= COMPÉTENCES =============  */
-#skills {
-    padding-top: 40px;
-    h1 {
-        margin-bottom: 30px;
-    }
-    #slider {
-        position: relative;
-        .slider {
-            width: 100%;
-            position: relative;
-            .slide_viewer {
-                height: 100px;
-                overflow: hidden;
-                position: relative;
-                .slide_group {
-                    height: 100%;
-                    position: relative;
-                    width: 100%;
-                    .slide {
-                        display: none;
-                        justify-content: center;
-                        align-items: center;
-                        height: 100%;
-                        position: absolute;
-                        width: 100%;
-                        &:first-child {
-                            display: flex;
-                        }
-                        .item {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            width: 50px;
-                            height: 35px;
-                            margin: 0 10px 20px;
-                            @include tablet {
-                                width: 75px;
-                                height: 50px;
-                            }
-                            img {
-                                height: 100%;
-                            }
-                        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            @include laptop {
+                align-items: flex-start;
+                width: 50%;
+            }
+            h1 {
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 20px;
+                @include laptop {
+                    font-size: 50px;
+                    text-align: start;
+                }
+                .color_blue {
+                    font-size: 30px;
+                    color: $blue;
+                    @include laptop {
+                        font-size: 50px;
                     }
                 }
             }
-            .slide_buttons {
+            p {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .btn {
+                margin-bottom: 30px;
+            }
+            .icons {
+                a {
+                    font-size: 30px;
+                    margin: 0 15px;
+                }
+            }
+        }
+        .nav_round {
+            display: none;
+            @include laptop {
+                display: flex;
+            }
+            width: 15px;
+            height: 190px;
+            position: fixed;
+            bottom: 50px;
+            left: 50px;
+            flex-direction: column;
+            .round {
+                display: block;
+                width: 15px;
+                height: 15px;
+                background-color: $grey-2;
+                margin-top: 20px;
+                border-radius: 999px;
+                flex-grow: 1;
+                transition: flex-grow 0.1s ease-in-out;
+                cursor: pointer;
+                &.active {
+                    background-color: $blue;
+                    flex-grow: 10000;
+                }
+            }
+        }
+        .scroll_down {
+            display: none;
+            cursor: pointer;
+            @include laptop {
+                display: block;
+            }
+
+            position: absolute;
+            left: 50%;
+            bottom: 60px;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+/* ============================== BTS ============================== */
+#BTS {
+    font-family: $karla;
+    background-color: $black;
+    padding: 60px 30px;
+    overflow: hidden;
+    padding: 30px;
+    @include laptop {
+        padding: 100px;
+    }
+    @include desktop {
+        padding: 100px 200px;
+    }
+    .main {
+        margin-bottom: 30px;
+        h1 {
+            position: relative;
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            @include laptop {
+                text-align: start;
+                font-size: 35px;
+            }
+            &::after {
+                content: '';
+                width: 80px;
+                height: 3px;
+                background-color: $blue;
                 position: absolute;
                 bottom: -10px;
                 left: 50%;
                 transform: translateX(-50%);
-                .slide_btn {
-                    color: #474544;
-                    font-size: 42px;
-                    margin: 0 0.175em;
-                    transition: all 0.4s ease-in-out;
-                    user-select: none;
-                    &.active,
-                    &:hover {
-                        color: $white-1;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
-        .directional_nav {
-            .previous_btn,
-            .next_btn {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                cursor: pointer;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                width: 65px;
-            }
-            .previous_btn {
-                left: 0;
-            }
-            .next_btn {
-                right: 0;
-            }
-        }
-    }
-}
-
-/* ============= STAGES =============  */
-#stages {
-    padding-top: 40px;
-    h1 {
-        margin-bottom: 30px;
-    }
-    .stages {
-        display: flex;
-        flex-direction: column;
-        @include tablet {
-            justify-content: space-between;
-            flex-direction: row;
-        }
-        .bloc {
-            h2 {
-                text-align: center;
-                margin-bottom: 20px;
-            }
-            h3 {
-                margin-bottom: 10px;
-            }
-            img {
-                display: block;
-                width: 100%;
-                margin: 20px auto 0;
-                cursor: zoom-in;
-            }
-        }
-    }
-}
-
-/* ============= PORTFOLIO =============  */
-#portfolio {
-    padding-top: 40px;
-    h1 {
-        margin-bottom: 30px;
-    }
-    .projets {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 250px);
-        justify-content: center;
-        gap: 20px;
-        .item {
-            width: 250px;
-            height: auto;
-            &:hover h3 {
-                color: $blue-1;
-            }
-            .item-img {
-                overflow: hidden;
-                img {
-                    width: 100%;
-                }
-            }
-            h3 {
-                margin: 5px 0;
-            }
-        }
-    }
-}
-
-/* ============= CONTACT =============  */
-#contact {
-    padding-top: 40px;
-    h1 {
-        margin-bottom: 30px;
-    }
-    .links {
-        display: flex;
-        flex-direction: column;
-        @include tablet {
-            justify-content: space-between;
-            flex-direction: row;
-        }
-        .w-8 {
-            padding-bottom: 10px;
-        }
-        .link-icon {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-        }
-        .icon-contact {
-            margin: 0 auto 20px;
-            border: 2px solid $blue-1;
-            &:hover {
-                background-color: $blue-1;
-                i {
-                    color: $white-1;
-                }
-            }
-            i {
-                font-size: $f-icon;
-                color: $blue-1;
-            }
-        }
-        .social-medias {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            @include up-phone {
-                padding: 0 10%;
-            }
-            @include tablet {
-                padding: 0;
-            }
-            @include desktop {
-                padding: 0 15%;
-            }
-            .link-icon {
-                border: 2px solid $white-2;
-                margin: 0 10px 10px;
-                @include tablet {
-                    margin: 0 20px 10px;
-                }
-                &:hover {
-                    background-color: $white-2;
-                    i {
-                        color: $grey-1;
-                    }
-                }
-                i {
-                    color: $white-2;
+                @include laptop {
+                    left: 0%;
+                    transform: translateX(0%);
                 }
             }
         }
         p {
             text-align: center;
+            @include laptop {
+                text-align: start;
+            }
+        }
+    }
+    .slider_options {
+        width: 100%;
+        height: 405px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        @include laptop {
+            height: auto;
+            overflow: visible;
+        }
+        .slide_group {
+            width: 100%;
+            position: relative;
+            @include laptop {
+                display: flex;
+                justify-content: center;
+            }
+            .options {
+                position: absolute;
+                width: 100%;
+                transform: translateX(110%);
+                transition: all 0.2s ease-in-out;
+                @include laptop {
+                    width: 50%;
+                    position: unset;
+                    transform: unset;
+                    background-color: $grey;
+                    padding: 40px;
+                    border-radius: 10px;
+                }
+                &:first-child {
+                    transform: translateX(0);
+                    @include laptop {
+                        margin-right: 50px;
+                    }
+                }
+                header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 40px;
+                    @include laptop {
+                        justify-content: center;
+                    }
+                    h2 {
+                        position: relative;
+                        font-size: 20px;
+                        font-family: $montserrat;
+                        text-transform: uppercase;
+                        @include laptop {
+                            font-size: 25px;
+                        }
+                        &::after {
+                            content: '';
+                            width: 80px;
+                            height: 3px;
+                            background-color: $blue;
+                            position: absolute;
+                            bottom: -10px;
+                            left: 0;
+                            @include laptop {
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+                    span {
+                        font-size: 20px;
+                        color: rgba($color: #FFFFFF, $alpha: 0.7);
+                        cursor: pointer;
+                        @include laptop {
+                            display: none;
+                        }
+                        .fa-arrow-right {
+                            margin-left: 10px;
+                        }
+                        .fa-arrow-left {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                p {
+                    margin-bottom: 15px;
+                }
+                ul, li {
+                    padding-left: 10px;
+                    list-style-type: '-';
+                }
+            }
         }
     }
 }
 
-/* ============= FOOTER =============  */
-footer {
-    margin-top: 30px;
-    padding: 60px;
-    background-color: black;
+/* ============================== A PROPOS ============================== */
+#About {
+    padding: 30px;
+    @include laptop {
+        padding: 100px;
+        display: flex;
+    }
+    @include desktop {
+        padding: 100px 200px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        @include laptop {
+            align-items: flex-start;
+            margin-right: 100px;
+            max-width: 500px;
+        }
+        h1 {
+            font-size: 25px;
+            position: relative;
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            @include laptop {
+                text-align: start;
+                font-size: 35px;
+            }
+            &::after {
+                content: '';
+                width: 80px;
+                height: 3px;
+                background-color: $blue;
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                @include laptop {
+                    left: 0%;
+                    transform: translateX(0%);
+                }
+            }
+        }
+        .infos_container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include laptop {
+                padding: 40px;
+                background-color: $black;  
+                border-radius: 20px;  
+            }
+            .photo {
+                width: 200px;
+                height: 200px;
+                overflow: hidden;
+                border-radius: 50%;
+                margin-bottom: 30px;
+                box-shadow: 0px 10px 20px -5px $black;
+                img {
+                    width: 100%;
+                }
+            }
+            .description {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .sliders {
+        width: 100%;
+        @include laptop {
+            width: 50%;
+        }
+        h2 {
+            position: relative;
+            font-size: 25px;
+            margin-bottom: 30px;
+            @include laptop {
+                font-size: 35px;
+                margin-bottom: 70px;
+            }
+            &::after {
+                content: '';
+                width: 80px;
+                height: 3px;
+                background-color: $blue;
+                position: absolute;
+                bottom: -10px;
+                left: 0%;
+                transform: translateX(0%);
+            }
+        }
+
+        .slider_container {
+            width: calc(100% - 50px);
+            margin: 0 auto 40px;
+            @include laptop {
+                margin-bottom: 100px;
+            }
+            .item {
+                display: flex;
+                justify-content: center;
+                height: 60px;
+                @include laptop {
+                    height: 90px;
+                }
+                img {
+                    width: 60px;
+                    height: 60px;
+                    @include laptop {
+                        width: 90px;
+                        height: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ============================== Projets ============================== */
+#Projets {
+    display: flex;
+    flex-wrap: wrap;
+    @include laptop {
+        padding: 0 100px;
+    }
+    .grid_item {
+        position: relative;
+        width: 50%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        background-color: $black;
+        overflow: hidden;
+        @include laptop {
+            width: 25%;
+            height: 250px;
+        }
+        &:hover {
+            img {
+                filter: blur(2px);
+            }
+            .grid_infos {
+                display: flex;
+            }
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        img {
+            height: 100%;
+        }
+        .grid_infos {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: rgba($color: #000000, $alpha: 0.40);
+            padding: 25px;
+            color: rgba($color: #FFFFFF, $alpha: 0.9);
+            h3 {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+            .open_modale {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                i {
+                    font-size: 30px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .grid_new_item {
+        position: relative;
+        width: 50%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $black;
+        overflow: hidden;
+        @include laptop {
+            width: 25%;
+            height: 250px;
+        }
+    }
+}
+
+/* ============================== MODALES ============================== */
+#Modales {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    z-index: 1000;
+    &.active {
+        display: flex; 
+    }
+    .modale {
+        display: none;
+        position: fixed;
+        width: 95%;
+        padding: 30px;
+        background-color: $grey;
+        border-radius: 8px;
+        z-index: 1001;
+        @include laptop {
+            width: 60%;
+        }
+        &.active {
+            display: block;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            h1 {
+                font-size: 25px;
+                @include laptop {
+                    font-size: 35px;
+                }
+            }
+            i {
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
+        .langages {
+            font-size: 20px;
+            font-family: $karla;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+            @include laptop {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+/* ============================== TABLEAU COMPETENCES ============================== */
+#TableauCompetences {
+    margin-bottom: 100px;
+    @include laptop {
+        padding: 0 100px;
+    }
+}
+
+/* ============================== CONTACT ============================== */
+#Contact {
+    position: relative;
+    padding: 60px 30px;
+    z-index: 0;
+    @include laptop {
+        padding: 30px 200px;
+    }
+    @include desktop {
+        padding: 7% 200px;
+    }
+    .svg_contact {
+        display: none;
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        @include laptop {
+            display: inline-block;
+        }
+    }
+    h1 {
+        position: relative;
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 40px;
+        @include laptop {
+            font-size: 35px;
+        }
+        &::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background-color: $blue;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
     p {
         text-align: center;
+        margin-bottom: 30px;
+        @include laptop {
+            padding: 0 100px;
+        }
+        @include desktop {
+            padding: 0 150px;
+        }
+    }
+    .reseaux {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            font-size: 30px;
+            margin: 0 15px;
+            @include laptop {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+/* ============================== FOOTER ============================== */
+footer {
+    background-color: $black;
+    padding: 50px;
+    p {
+        font-size: 20px;
+        text-align: center;
+        color: rgba($color: #FFFFFF, $alpha: 0.9);
     }
 }

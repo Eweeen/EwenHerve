@@ -1,16 +1,16 @@
 /* ============= VARIABLES ============= */
 /* ========== COLORS ========== */
-$blue-1: #4682B4;
-$blue-2: #72A8D6;
-$grey-1: #121212;
-$grey-2: #212121;
-$grey-3: #313131;
-$white-1: rgba(241, 241, 241, 1);
-$white-2: rgba(255, 255, 255, 0.7);
-$white-3: rgba(255, 255, 255, 0.4);
+$black: #131217;
+$black-2: #1D1D22;
+$grey: #343439;
+$grey-2: #707070;
+$white: #F1F1F1;
+$blue: #60B2FD;
 
 /* ========== Fonts ========== */
-$poppins: 'Poppins', sans-serif;
+$montserrat: "Montserrat", sans-serif;
+$karla: "Karla", sans-serif;
+$hurricane: "Hurricane", sans-serif;
 
 /* ========== Font-size ========== */
 $f-1: 28px;
@@ -18,8 +18,9 @@ $f-2: 22px;
 $f-3: 16px;
 $f-4: 12px;
 $f-icon: 18px;
-$fl-icon: 50px;
-$fxl-icon: 70px;
+$fm-icon: 30px;
+$fl-icon: 40px;
+$fxl-icon: 60px;
 /* ========== PADDING ========== */
 $p-1: 5px;
 $p-2: 10px;
@@ -76,17 +77,5 @@ $mxl-3: 180px;
 @mixin desktop {
     @media screen and (min-width: 1200px) {
         @content;
-    }
-}
-
-@keyframes animate-icon-down {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(15px);
-    }
-    100% {
-        transform: translateY(0);
     }
 }

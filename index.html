@@ -4,78 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/boxicons/css/boxicons.min.css">
+    <link rel="icon" href="data/sublimetext.png">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="assets/CSS/styles.css">
     <title>Ewen Hervé</title>
 </head>
 <body>
+<!-- ============================== LOADER ============================== -->
+    <div class="loader">
+        <i class="fa-solid fa-spinner"></i>
+        <h3>Chargement de la page, veuillez patienter</h3>
+    </div>
+<!-- ============================== NAVBAR ============================== -->
+    <header id="header">
+        <nav class="navbar">
+            <h1>Ewen</h1>
 
-    <nav>
-        <ul>
-            <li class="link-home active"><a><i class='bx bx-home'></i><span>Accueil</span></a></li>
-            <li class="link-bts"><a><i class='bx bxs-graduation' ></i><span>BTS</span></a></li>
-            <li class="link-about"><a><i class='bx bxs-user-badge'></i><span>À propos</span></a></li>
-            <li class="link-skills"><a><i class='bx bxl-html5' ></i><span>Compétences</span></a></li>
-            <li class="link-stages"><a><i class='bx bx-briefcase'></i><span>Stages</span></a></li>
-            <li class="link-portfolio"><a><i class='bx bxs-folder-open' ></i><span>Portfolio</span></a></li>
-            <li class="link-contact"><a><i class='bx bxs-contact' ></i><span>Contact</span></a></li>
-        </ul>
-    </nav>
+            <div id="btn-nav-hamburger">
+                <div class="hamburger_bar"></div>
+            </div>
 
-    <div class="menu">
-        <div class="icon-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+            <ul class="nav_list">
+                <li class="nav_item link-home">Accueil</li>
+                <li class="nav_item link-bts">Bts</li>
+                <li class="nav_item link-about">À propos</li>
+                <li class="nav_item link-projets">Projets</li>
+                <li class="nav_item link-contact">Contact</li>
+            </ul>
+        </nav>
 
-        <div class="menu-content">
-            <ul>
-                <li class="link-home active"><a href="#"><i class='bx bx-home'></i><span>Accueil</span></a></li>
-                <li class="link-bts"><a href="#BTS"><i class='bx bxs-graduation' ></i><span>BTS</span></a></li>
-                <li class="link-about"><a href="#about"><i class='bx bxs-user-badge'></i><span>À propos</span></a></li>
-                <li class="link-skills"><a href="#skills"><i class='bx bxl-html5' ></i><span>Compétences</span></a></li>
-                <li class="link-stages"><a href="#stages"><i class='bx bx-briefcase'></i><span>Stages</span></a></li>
-                <li class="link-portfolio"><a href="#portfolio"><i class='bx bxs-folder-open' ></i><span>Portfolio</span></a></li>
-                <li class="link-contact"><a href="#contact"><i class='bx bxs-contact' ></i><span>Contact</span></a></li>
+        <div class="nav_container">
+            <ul class="nav_list">
+                <li class="nav_item link-home">Accueil</li>
+                <li class="nav_item link-bts">Bts</li>
+                <li class="nav_item link-about">À propos</li>
+                <li class="nav_item link-projets">Projets</li>
+                <li class="nav_item link-contact">Contact</li>
             </ul>
         </div>
-    </div>
-    
-    <section id="Accueil" class="h-100">
-        <div class="presentation">
-            <div class="photo-acceuil">
-                <img src="assets/data/ewen.jpg" alt="Photo d'Ewen" draggable="false">
+    </header>
+<!-- ============================== SECTION ACCUEIL ============================== -->
+    <section id="Accueil">
+        <img src="data/svg-accueil.svg" alt="SVG" class="svg_accueil">
+
+        <div class="accueil_container">
+            <div class="photo">
+                <img src="img/Photo.jpg" alt="">
             </div>
 
-            <h1>Ewen Hervé</h1>
-        </div>
+            <div class="container">
+                <h1>Bienvenue sur mon <span class="color_blue">portfolio</span></h1>
+                
+                <p>Je m'appelle Ewen, je suis développeur web junior.</p>
+                
+                <span class="btn link-contact">Contact</span>
+                
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/ewenherve/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com/ewwenn__"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://github.com/Ewen35550"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
 
-        <div class="scroll">
-            <p class="text-muted">Scroll down</p>
-            <a href="#BTS" draggable="false">
-                <i class='bx bx-chevrons-down'></i>
-            </a>
+            <div class="nav_round">
+                <span class="round link-home"></span>
+                <span class="round link-bts"></span>
+                <span class="round link-about"></span>
+                <span class="round link-projets"></span>
+                <span class="round link-contact"></span>
+            </div>
+
+            <span class="scroll_down link-bts">
+                <i class="fa-solid fa-chevron-down"></i>
+            </span>
+
         </div>
-        
     </section>
-    
-    <div class="container">
-        <section id="BTS">
-            <h1>BTS SIO</h1>
-
-            <div class="bloc w-12">
-                <p class="text">Le BTS Services informatique aux Organisations est un diplôme reconnu par l’état de niveau Bac+2. Il remplace depuis septembre 2011 l’ancien BTS informatique de Gestion (BTS IG). En effet, cette nouvelle formule répond aux attentes de la profession en matière de qualification. Le programme a évolué en fonction de la place et du rôle des TIC (Technologies d’Information Communication) et propose deux spécialités bien distinctes : le BTS SIO SISR et le BTS SIO SLAM.</p>
-                <p class="text-muted">Définition diplomeo.com</p>
-            </div>
-
-            <div class="options">
-                <div class="bloc w-6">
-                    <h2>Option : SISR</h2>
+<!-- ============================== SECTION BTS ============================== -->
+    <section id="BTS">
+        <div class="main">
+            <h1>Mon BTS</h1>
+            <p>Le BTS Services informatique aux Organisations est un diplôme reconnu par l’état de niveau Bac+2. Il remplace depuis septembre 2011 l’ancien BTS informatique de Gestion (BTS IG). En effet, cette nouvelle formule répond aux attentes de la profession en matière de qualification. Le programme a évolué en fonction de la place et du rôle des TIC (Technologies d’Information Communication) et propose deux spécialités bien distinctes : le BTS SIO SISR et le BTS SIO SLAM.</p>
+        </div>
+            
+        <div class="slider_options">
+            <div class="slide_group">
+                <div class="options sisr">
+                    <header>
+                        <h2>Option sisr</h2>
+                        <span id="slide_slam">SLAM <i class="fa-solid fa-arrow-right"></i></span>
+                    </header>
                     <p>L’option Solutions d’infrastructure, systèmes et réseaux forme des professionnels des réseaux et équipements informatiques (installation, maintenance, sécurité). En sortant d’un BTS SIO SISR, vous serez capables de gérer et d’administrer le réseau d’une société et d’assurer sa sécurité et sa maintenance.
-                    <br>
                     Les techniciens supérieurs en informatique option SISR, peuvent accéder aux métiers de :</p>
-                    <br>
                     <ul>
                         <li>Administrateur systèmes et réseaux,</li>
                         <li>Informaticien support et déploiement,</li>
@@ -85,220 +106,356 @@
                         <li>Technicien de production,</li>
                         <li>Technicien micro et réseaux.</li>
                     </ul>
-                    <p class="text-muted">Définition diplomeo.com</p>
                 </div>
-                
-                <div class="bloc w-6">
-                    <h2>Option : SLAM</h2>
+
+                <div class="options slam">
+                    <header>
+                        <h2>Option slam</h2>
+                        <span id="slide_sisr"><i class="fa-solid fa-arrow-left"></i> SISR</span>
+                    </header>
                     <p>L’option Solutions logicielles et applications métiers forme des spécialistes des logiciels (rédaction d’un cahier des charges, formulation des besoins et spécifications, développement, intégration au sein de la société).
-                        <br>
-                        Les techniciens supérieurs en informatique option slam, sont préparés aux métiers de :</p>
-                    <br>
+                    Les techniciens supérieurs en informatique option slam, sont préparés aux métiers de :</p>
                     <ul>
-                        <li>Développeur d’applications informatiques</li>
-                        <li>Développeur informatique</li>
-                        <li>Analyste d’applications ou d’études</li>
-                        <li>Analyste programmeur</li>
-                        <li>Chargé d’études informatiques</li>
-                        <li>Informaticien d’études</li>
-                        <li>Programmeur analyste</li>
-                        <li>Programmeur d’applications</li>
-                        <li>Responsable des services applicatifs</li>
-                        <li>Technicien d’études informatiques</li>
+                        <li>Développeur d’applications informatiques,</li>
+                        <li>Développeur informatique,</li>
+                        <li>Analyste d’applications ou d’études,</li>
+                        <li>Analyste programmeur,</li>
+                        <li>Chargé d’études informatiques,</li>
+                        <li>Informaticien d’études,</li>
+                        <li>Programmeur analyste,</li>
+                        <li>Programmeur d’applications,</li>
+                        <li>Responsable des services applicatifs,</li>
+                        <li>Technicien d’études informatiques.</li>
                     </ul>
-                    <p class="text-muted">Définition diplomeo.com</p>
                 </div>
             </div>
-        </section>
-
-        <section id="about">
+        </div>
+        <p>Source : définition diplomeo.com</p>
+    </section>
+<!-- ============================== SECTION A PROPOS ============================== -->
+    <section id="About">
+        <div class="container">
             <h1>À propos</h1>
-
-            <div class="bloc">
-                <div class="photo-about">
-                    <img src="assets/data/ewen.jpg" alt="Photo d'Ewen">
+            <div class="infos_container">
+                <div class="photo">
+                    <img src="img/Photo.jpg" alt="Photo d'Ewen">
                 </div>
+                <p class="description">Je m’appelle Ewen, j’ai 19 ans et je suis actuellement en BTS SIO (option SLAM) au lycée Saint-Sauveur de Redon. Dans le futur j’aimerai devenir développeur web/mobile.</p>
+                <a href="data/CV.pdf" target="_blank" class="btn">Voir mon cv</a>
+            </div>
+        </div>
+        <div class="sliders">
+            <h2>Mes compétences</h2>
+
+            <div class="slider_container">
+                <div class="item">
+                    <img src="data/html.png" title="HTML" alt="Icon HTML">
+                </div>
+                <div class="item">
+                    <img src="data/css.png" title="CSS" alt="Icon CSS">
+                </div>
+                <div class="item">
+                    <img src="data/sass.png" title="SASS" alt="Icon SASS">
+                </div>
+                <div class="item">
+                    <img src="data/javascript.png" title="Javascript" alt="Icon Javascript">
+                </div>
+                <div class="item">
+                    <img src="data/typescript.png" title="Typescript" alt="Icon Typescript">
+                </div>
+                <div class="item">
+                    <img src="data/php.png" title="PHP" alt="Icon PHP">
+                </div>
+                <div class="item">
+                    <img src="data/mysql.png" title="MySQL" alt="Icon MySQL">
+                </div>
+                <div class="item">
+                    <img src="data/laravel.png" title="Laravel" alt="Icon Laravel">
+                </div>
+                <div class="item">
+                    <img src="data/java.png" title="Java" alt="Icon Java">
+                </div>
+            </div>
+
+            <h2>Mes outils de travail</h2>
+
+            <div class="slider_container">
+                <div class="item">
+                    <img src="data/drive.png" title="Google Drive" alt="Icon Drive">
+                </div>
+                <div class="item">
+                    <img src="data/visual-studio-code.png" title="Visual Studio Code" alt="Icon Visual Studio Code">
+                </div>
+                <div class="item">
+                    <img src="data/figma.png" title="Figma" alt="Icon Figma">
+                </div>
+                <div class="item">
+                    <img src="data/adobexd.png" title="Adobe XD" alt="Icon AdobeXd">
+                </div>
+                <div class="item">
+                    <img src="data/sublimetext.png" title="Sublime Text" alt="Icon Sublime Text">
+                </div>
+                <div class="item">
+                    <img src="data/git.png" title="Git" alt="Icon Git">
+                </div>
+                <div class="item">
+                    <img src="data/github.png" title="GitHub" alt="Icon GitHub">
+                </div>
+                <div class="item">
+                    <img src="data/word.png" title="Microsoft Word" alt="Icon Microsoft Word">
+                </div>
+                <div class="item">
+                    <img src="data/excel.png" title="Microsoft Excel" alt="Icon Microsoft Excel">
+                </div>
+                <div class="item">
+                    <img src="data/powerpoint.png" title="Microsoft PowerPoint" alt="Icon Microsoft PowerPoint">
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ============================== TABLEAU DE COMPETENCES AU FORMAT PDF ============================== -->
+    <section id="TableauCompetences">
+        <iframe src='data/TableauCompetences.pdf' width='100%' height='500px' frameborder='0'></iframe>
+    </section>
+<!-- ============================== SECTION PROJETS ============================== -->
+    <section id="Projets">
+        <!-- ==================== STAGE UKERUN ==================== -->
+        <div class="grid_item">
+            <img src="img/stage-1/stage1.jpg" alt="Photo Stage Ukerun">
+            <div class="grid_infos">
                 <div>
-                    <p class="text">Je m'appelle Ewen, j'ai 19 ans et je suis actuellement en BTS SIO (option SLAM) au lycée Saint-Sauveur de Redon.
-                    <br>
-                    Dans le futur j'aimerai devenir développeur web/mobile.</p>
+                    <h3>UKERUN</h3>
+                    <p>HTML, CSS, JS, PHP</p>
+                </div>
 
-                    <a href="assets/data/CV.pdf" target="_blank" class="btn">Voir mon cv</a>
+                <div class="open_modale modale_ukerun">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Cliquer pour voir plus d’informations</span>
                 </div>
             </div>
-        </section>
-
-        <section id="skills">
-            <h1>Compétences</h1>
-
-            <div id="slider" class="bloc">
-                <div class="slider">
-                    <div class="slide_viewer">
-                        <div class="slide_group">
-                            <div class="slide">
-                                <div class="item">
-                                    <img src="assets/data/html.png" title="HTML" alt="Logo HTML">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/data/css.png" title="CSS" alt="Logo CSS">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/data/javascript.png" title="Javascript" alt="Logo Javascript">
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="item">
-                                    <img src="assets/data/PHP.png" title="PHP" alt="Logo PHP">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/data/laravel.png" title="Laravel" alt="Logo Laravel">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/data/Java-Logo.png" title="Java" alt="Logo Java">
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="item">
-                                    <img src="assets/data/word.png" title="Word" alt="Logo Word">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/data/excel.png" title="Excel" alt="Logo Excel">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/data/powerpoint.png" title="PowerPoint" alt="Logo PowerPoint">
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="item">
-                                    <img src="assets/data/vscode.png" title="Visual Studio Code" alt="Logo Visual Studio Code">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/data/sublimetext.png" title="Sublime Text" alt="Logo Sublime Text">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/data/figma.svg" title="Figma" alt="Logo Figma">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide_buttons"></div>
+        </div>
+        <!-- ==================== STAGE AMON ESPORT ==================== -->
+        <div class="grid_item">
+            <img src="img/stage-2/stage2.png" alt="Photo Stage Amon e-Sport">
+            <div class="grid_infos">
+                <div>
+                    <h3>AMON ESPORT</h3>
+                    <p>HTML, CSS, JS, LARAVEL</p>
                 </div>
 
-                <div class="directional_nav">
-                    <div class="previous_btn" title="Previous">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
-                            <path fill="#E1E1E1" d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564	c-0.215,0.218-0.498,0.323-0.78,0.323C25.929,33.569,25.646,33.464,25.43,33.243z"/>
-                        </svg>
-                    </div>
-                    <div class="next_btn" title="Next">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
-                            <path fill="#E1E1E1" d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035	L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z"/>
-                        </svg>
-                    </div>
+                <div class="open_modale modale_amon">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Cliquer pour voir plus d’informations</span>
                 </div>
             </div>
-        </section>
-
-        <section id="stages">
-            <h1>Stages</h1>
-
-            <div class="stages">
-                <div class="bloc w-6">
-                    <h2>1ère année</h2>
-                    <h3>Stage chez UKERUN</h3>
-                    <p>Création d'un site internet en PHP pour répresenter virtuellement l'association et lui donner la possibilité de programmer leurs prochaines courses ainsi que de créer des albums photos.</p>
-
-                    <a href="assets/data/stage1.png" target="_blank">
-                        <img src="assets/data/stage1.png" alt="Image site stage 1">
-                    </a>
+        </div>
+        <!-- ==================== BURGER CODE ==================== -->
+        <div class="grid_item">
+            <img src="img/Projet-1/projet1.png" alt="Photo Projet Burger Code">
+            <div class="grid_infos">
+                <div>
+                    <h3>BURGER CODE</h3>
+                    <p>HTML, CSS, JS</p>
                 </div>
-                <div class="bloc w-6">
-                    <h2>2ème année</h2>
-                    <h3>Stage chez AMON ESPORT</h3>
-                    <p>Création d'un site internet avec Laravel pour regrouper les supporters de la structure et leur donner la possibilité d'échanger via un chat général ou par messages privés sur le site.
-                    Le site permet également côté administrateur de créer des actualités et les affichées sur la page d'accueil.</p>
 
-                    <a href="assets/data/stage2.png" target="_blank">
-                        <img src="assets/data/stage2.png" alt="Image site stage 1">
-                    </a>
+                <div class="open_modale modale_burger_code">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Cliquer pour voir plus d’informations</span>
                 </div>
             </div>
-        </section>
+        </div>
+        <!-- ==================== AP QUIZ ==================== -->
+        <div class="grid_item">
+            <img src="img/Projet-2/projet2.png" alt="Photo Projet AP QUIZ">
+            <div class="grid_infos">
+                <div>
+                    <h3>AP QUIZ</h3>
+                    <p>HTML, CSS, JS, JSON</p>
+                </div>
 
-        <section id="portfolio">
-            <h1>Portfolio</h1>
-
-            <div class="bloc">
-                <div class="projets">
-                    <a href="Projet1/index.html" class="item">
-                        <div class="item-img">
-                            <img src="assets/data/projet-1.png" alt="">
-                        </div>
-                        <h3>Projet 1</h3>
-                    </a>
-
-                    <a href="Projet2/index.html" class="item">
-                        <div class="item-img">
-                            <img src="assets/data/projet-2.png" alt="">
-                        </div>
-                        <h3>Projet 2</h3>
-                    </a>
-
-                    <a href="Projet3/index.html" class="item">
-                        <div class="item-img">
-                            <img src="assets/data/projet-3.png" alt="">
-                        </div>
-                        <h3>Projet 3</h3>
-                    </a>
+                <div class="open_modale modale_app_quiz">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Cliquer pour voir plus d’informations</span>
                 </div>
             </div>
-        </section>
-
-        <section id="contact">
-            <h1>Contact</h1>
-
-            <div class="links">
-                <div class="bloc w-8">
-                    <div class="social-medias">
-                        <a href="https://twitter.com/ewwenn__" target="_blank">
-                            <div class="link-icon">
-                                <i class='bx bxl-twitter'></i>
-                            </div>
-                        </a>
-                        <a href="https://instagram.com/ewen_rv" target="_blank">
-                            <div class="link-icon">
-                                <i class='bx bxl-instagram' ></i>
-                            </div>
-                        </a>
-                        <a href="https://linkedin.com/in/ewenherve" target="_blank">
-                            <div class="link-icon">
-                                <i class='bx bxl-linkedin-square' ></i>
-                            </div>
-                        </a>
-                        <a href="https://github.com/Ewen35550" target="_blank">    
-                            <div class="link-icon">
-                                <i class='bx bxl-github'></i>
-                            </div>
-                        </a>
-                    </div>
+        </div>
+        <!-- ==================== PUISSANCE 4 ==================== -->
+        <div class="grid_item">
+            <img src="img/Projet-3/projet3.png" alt="Photo Projet Puissance 4">
+            <div class="grid_infos">
+                <div>
+                    <h3>Puissance 4</h3>
+                    <p>HTML, CSS, JS</p>
                 </div>
-                <div class="bloc w-4">
-                    <div class="link-icon icon-contact">
-                        <i class='bx bx-envelope'></i>
-                    </div>
-                    <p>ewen.herve.35550@gmail.com</p>
+
+                <div class="open_modale modale_puissance4">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Cliquer pour voir plus d’informations</span>
                 </div>
             </div>
-        </section>
-        
-    </div>
+        </div>
+        <!-- ==================== GSB ==================== -->
+        <div class="grid_item">
+            <img src="img/Projet-4/projet4.png" alt="Photo Projet GSB">
+            <div class="grid_infos">
+                <div>
+                    <h3>GSB</h3>
+                    <p>HTML, SASS, JS, LARAVEL, MySQL</p>
+                </div>
 
+                <div class="open_modale modale_gsb">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Cliquer pour voir plus d’informations</span>
+                </div>
+            </div>
+        </div>
+        <!-- ==================== CFUN ==================== -->
+        <div class="grid_item">
+            <img src="img/Projet-5/projet5.jpg" alt="Photo Projet CFUN">
+            <div class="grid_infos">
+                <div>
+                    <h3>CFUN</h3>
+                    <p>Java</p>
+                </div>
+
+                <div class="open_modale modale_cfun">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Cliquer pour voir plus d’informations</span>
+                </div>
+            </div>
+        </div>
+        <!-- ==================== A VENIR ==================== -->
+        <div class="grid_new_item">
+            <h3>À venir</h3>
+        </div>
+    </section>
+<!-- ============================== SECTION MODALES ============================== -->
+    <section id="Modales">
+        <!-- ==================== MODALE UKERUN ==================== -->
+        <div class="modale modale_ukerun">
+            <header>
+                <h1>UKERUN</h1>
+                <i class="fa-solid fa-xmark"></i>
+            </header>
+            <p class="langages">HTML, CSS, JS, PHP</p>
+
+            <p class="description">Ukerun est une association sportive. Le site web à été réaliser dans le but d'avoir plus de visibilitée sur la web. Le site à été développer avec l'HTML, le CSS, le JavaScript, le PHP et MYSQL. L'ojectif de ce stage était de créer un site web pour annoncer les prochaines courses organisées et créer des albums photos des sorties. Le site comprend une partie administrateur pour que le président de l'association puisse gérer les informations, les courses et les albums photos sans toucher au code.</p>
+
+            <a href="https://ukerun.fr" target="_blank" class="btn">Voir le site</a>
+        </div>
+        <!-- ==================== MODALE AMON ESPORT ==================== -->
+        <div class="modale modale_amon">
+            <header>
+                <h1>AMON ESPORT</h1>
+                <i class="fa-solid fa-xmark"></i>
+            </header>
+            <p class="langages">HTML, CSS, JS, LARAVEL</p>
+
+            <p class="description">AMOPN e-Sport est un projet que j'ai pu réaliser durant mon stage de deuxième année. L’objectif de l’association est de développer des projets dans l'e-Sport par organisation de plusieurs compétitions en ligne, streaming, participation à des LANS et tournois en ligne, encadrement des entraînements de joueurs esportifs. Le site devait contenir une application de chat pour les utilisateurs avec un système de login/register et une interface administrateur.</p>
+
+            <a href="https://github.com/Ewen35550/Amon" target="_blank" class="btn">Voir le projet sur GitHub</a>
+        </div>
+        <!-- ==================== MODALE BURGER CODE ==================== -->
+        <div class="modale modale_burger_code">
+            <header>
+                <h1>BURGER CODE</h1>
+                <i class="fa-solid fa-xmark"></i>
+            </header>
+            <p class="langages">HTML, CSS, JS</p>
+
+            <p class="description">Burger Code est un projet réalisé lors de ma première année de BTS. Ce site a été créé en HTML, CSS et Javascript. L'objectif de ce projet était simplement de créer un site en HTML/CSS, j'ai donc décider de créer un site de vente (non fonctionnel) de burger.</p>
+            
+            <a href="https://github.com/Ewen35550/Amon" target="_blank" class="btn">Voir le projet sur GitHub</a>
+        </div>
+        <!-- ==================== MODALE AP QUIZ ==================== -->
+        <div class="modale modale_app_quiz">
+            <header>
+                <h1>AP QUIZ</h1>
+                <i class="fa-solid fa-xmark"></i>
+            </header>
+            <p class="langages">HTML, CSS, JS, JSON</p>
+
+            <p class="description">AP Quiz est un site réaliser en HTML, CSS, Javascript et JSON lors de ma première année de BTS. L'objectif de ce projet était de créer un application web en JS utilisant une base de données en JSON. Cette application sert à créer des quiz.</p>
+
+            <a href="https://github.com/Ewen35550/SLAM" target="_blank" class="btn">Voir le projet sur GitHub</a>
+            <a href="https://ewen35550.github.io/SLAM" target="_blank" class="btn">Tester le projet</a>
+        </div>
+        <!-- ==================== MODALE PUISSANCE 4 ==================== -->
+        <div class="modale modale_puissance4">
+            <header>
+                <h1>Puissance 4</h1>
+                <i class="fa-solid fa-xmark"></i>
+            </header>
+            <p class="langages">HTML, CSS, JS</p>
+
+            <p class="description">Le puissance 4 est un site réaliser en HTML, CSS et Javascript lors de ma première année de BTS. </p> 
+        </div>
+        <!-- ==================== MODALE GSB ==================== -->
+        <div class="modale modale_gsb">
+            <header>
+                <h1>GSB</h1>
+                <i class="fa-solid fa-xmark"></i>
+            </header>
+            <p class="langages">HTML, SASS, JS, LARAVEL, MySQL</p>
+
+            <p class="description">Le projet GSB est l'un des projets de fin d'année créé pour mon BTS. Il a été réaliser avec le framework Laravel 8.</p> 
+
+            <a href="https://github.com/Ewen35550/GSB" target="_blank" class="btn">Voir le projet sur GitHub</a>
+        </div>
+        <!-- ==================== MODALE GSB ==================== -->
+        <div class="modale modale_cfun">
+            <header>
+                <h1>CFUN</h1>
+                <i class="fa-solid fa-xmark"></i>
+            </header>
+            <p class="langages">Java</p>
+
+            <p class="description">Le projet CFUN est l'un des projets de fin d'année créé pour mon BTS. Il a été réaliser en Java.</p> 
+
+            <a href="https://github.com/BenjaminDrn/BTS_CFUN" target="_blank" class="btn">Voir le projet sur GitHub</a>
+        </div>
+    </section>
+<!-- ============================== SECTION CONTACT ============================== -->
+    <section id="Contact">
+        <img src="data/svg-contact.svg" alt="SVG Contact" class="svg_contact">
+
+        <h1>Contactez-moi</h1>
+
+        <p>Si vous souhaitez me contacter, je vous invite à le faire via les liens présents ci-dessous.</p>
+
+        <div class="reseaux">
+            <a href="https://www.linkedin.com/in/ewenherve/" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/ewwenn__" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://github.com/Ewen35550" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:ewen.herve.35550@gmail.com" target="_blank">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+        </div>
+    </section>
+<!-- ============================== FOOTER ============================== -->
     <footer>
-        <p>Copyrigth © 2022 Ewen Hervé</p>
+        <p>Copyright © 2022 Ewen Hervé</p>
     </footer>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/nav.js"></script>
+<!-- ============================== SCRIPTS ============================== -->
+    <script src="https://kit.fontawesome.com/e68d38466e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/JS/app.js"></script>
+    <script>
+        $('.slider_container').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+        });
+    </script>
 </body>
 </html>
